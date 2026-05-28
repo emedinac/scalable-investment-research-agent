@@ -2,10 +2,10 @@ from research_agent.providers.base import LLMProvider
 from research_agent.providers.mock_provider import MockLLMProvider
 
 
-def build_llm_provider(openai_api_key: str | None, anthropic_api_key: str | None) -> LLMProvider:
+def build_llm_provider(openai_api_key: str | None) -> LLMProvider:
     # The provider boundary is intentionally real, but the first version uses a
     # deterministic fallback so local demos never depend on paid API keys.
-    _ = (openai_api_key, anthropic_api_key)
+    _ = (openai_api_key)
     return MockLLMProvider()
 
 
