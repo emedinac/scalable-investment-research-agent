@@ -111,7 +111,7 @@ def build_research_graph(
         cache=cache,
         search_provider=search_provider,
         market_provider=MockMarketDataProvider(),
-        llm_provider=build_llm_provider(settings.openai_api_key),
+        llm_provider=build_llm_provider(settings.openai_api_key, settings.use_local_llm),
         token_tracker=TokenTracker(),
         db_session_factory=db_session_factory,
     )

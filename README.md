@@ -12,6 +12,9 @@ This is intentionally aproduction skeleton: external providers are behind
 interfaces, and the app falls back to deterministic mock data when API keys are
 missing so the whole stack can run locally.
 
+Set `USE_LOCAL_LLM=true` to force the local deterministic LLM provider even when
+`OPENAI_API_KEY` is configured.
+
 ## Quickstart
 
 ```bash

@@ -24,6 +24,7 @@ class Settings(BaseSettings):
 
     tavily_api_key: str | None = None
     openai_api_key: str | None = None
+    use_local_llm: bool = False
     alpha_vantage_api_key: str | None = None
     langfuse_public_key: str | None = None
     langfuse_secret_key: str | None = None
@@ -36,7 +37,7 @@ class Settings(BaseSettings):
 
     @property
     def live_llm_enabled(self) -> bool:
-        return bool(self.openai_api_key)
+        return bool(self.openai_api_key) and not self.use_local_llm
 
 
 @lru_cache
