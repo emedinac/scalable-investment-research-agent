@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+  - name: research-agent
+    orgId: 1
+    folder: Research Agent
+    type: file
+    disableDeletion: true
+    updateIntervalSeconds: 30
+    options:
+      path: /etc/grafana/provisioning/dashboards
