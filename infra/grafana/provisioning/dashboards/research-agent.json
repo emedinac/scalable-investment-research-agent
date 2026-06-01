@@ -1,0 +1,10 @@
+{
+  "title": "Scalable Investment Research Agent",
+  "schemaVersion": 39,
+  "panels": [
+    {"type": "timeseries", "title": "Request throughput vs cache hit", "targets": []},
+    {"type": "timeseries", "title": "Token cost per hour", "targets": []},
+    {"type": "timeseries", "title": "Agent latency p50/p95/p99", "targets": []},
+    {"type": "timeseries", "title": "Guardrail trigger rate", "targets": []}
+  ]
+}
