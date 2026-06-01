@@ -14,7 +14,7 @@ async def test_query_flow_with_mock_providers() -> None:
     payload = response.json()
     assert payload["ticker"] == "GOOGL"
     assert payload["cache"]["hit"] is False
-    assert "not personalized financial advice" in payload["disclaimer"]
+    assert "disclaimer" not in payload
     assert "you should buy" not in payload["analysis"].lower()
 
 
