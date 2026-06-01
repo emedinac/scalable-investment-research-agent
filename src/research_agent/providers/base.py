@@ -12,7 +12,6 @@ class SearchResult:
 
 @dataclass(frozen=True)
 class MarketSnapshot:
-    company: str
     ticker: str
     current_price: float
     eps: float | None
