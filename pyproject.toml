@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Production-oriented investment research agent scaffold with FastAPI, LangGraph, caching, guardrails, and observability."
 authors = [{ name = "Edgar Medina", email = "edgarmedina1801@gmail.com" }]
 readme = "README.md"
-requires-python = ">=3.12,<4.0"
+requires-python = ">=3.11,<3.13"
 dependencies = [
   "fastapi>=0.136,<0.137",
   "uvicorn[standard]>=0.48,<0.49",
