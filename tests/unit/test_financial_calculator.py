@@ -4,7 +4,6 @@ from research_agent.tools.financial_calculator import calculate_pe_ratio, valuat
 
 def test_calculate_pe_ratio() -> None:
     snapshot = MarketSnapshot(
-        company="Alphabet Inc.",
         ticker="GOOGL",
         current_price=174.25,
         eps=7.42,

@@ -2,14 +2,13 @@ from research_agent.providers.base import MarketSnapshot
 
 
 class YFinanceMarketDataProvider:
-    async def snapshot(self, company_or_ticker: str) -> MarketSnapshot:
+    async def snapshot(self, ticker: str) -> MarketSnapshot:
         import yfinance as yf
 
-        ticker = company_or_ticker.upper().replace(" ", "")
+        ticker = ticker.upper().replace(" ", "")
         info = yf.Ticker(ticker).fast_info
         price = float(info.get("last_price") or info.get("lastPrice") or 0.0)
         return MarketSnapshot(
-            company=ticker,
             ticker=ticker,
             current_price=price,
             eps=None,
